@@ -34,6 +34,11 @@ public class Playlist {
         Collections.swap(this.songTitles, this.songTitles.indexOf(foo.title), this.songTitles.indexOf(bar.title));
     }
 
+    public void removeSong(Song baz){
+        this.songTitles.remove(this.songTitles.indexOf(baz.title));
+        this.duration = this.duration - baz.durationInSeconds;
+    }
+
     public Playlist(String name) {
         this.name = name;
         this.duration = 0;
