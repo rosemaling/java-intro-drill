@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Playlist {
     String name;
@@ -27,6 +28,10 @@ public class Playlist {
     public Object[] songNames(){
         array = this.songTitles.toArray();
         return array;
+    }
+
+    public void swap(Song foo, Song bar){
+        Collections.swap(this.songTitles, this.songTitles.indexOf(foo.title), this.songTitles.indexOf(bar.title));
     }
 
     public Playlist(String name) {
